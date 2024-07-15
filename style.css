@@ -287,41 +287,32 @@ margin-bottom: 2rem;
     font-family: emoji;
 }
 
+  @media (max-width: 450px) {
+    .parameter {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .parameter img {
+      width: 30px;
+      height: 30px;
+    }
+    .parameter p:first-of-type {
+      font-size: 0.9rem;
+    }
+    .parameter p:last-of-type {
+      font-size: 0.7rem;
+    }
+  }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.tab.current-tab{
-    /* background-color: rgba(219, 226, 239, 0.5); */
-    background-color: rgb(42 137 218 / 50%);
-    border-radius: 4px;
-    font-family: sans-serif;
-    font-size: 18px;
-}
-
-
-.form-container.active{
-    opacity: 1;
-    scale: 1;
-    display: flex;
-}
+  
+@media (max-width: 350px) {
+    .parameter-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .parameter {
+      width: 100%;
+      max-width: none;
+    }
+  }
