@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+:root{
+    --colorDark1:#112D4E;
+    --colorDark2:#3F72AF;
+    --colorLight1:#DBE2EF;
+    --colorLight2:#F9F7F7;
+
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background: var(--colorLight2);
+    /* background-image: linear-gradient(160deg,#112d4e 0%, #3f72af 100%); */
+    /* background-color: #5484ce; */
+    background-image: linear-gradient(
+  325deg,
+  hsl(119deg 66% 30%) 0%,
+  hsl(154deg 100% 25%) 6%,
+  hsl(169deg 100% 25%) 25%,
+  hsl(180deg 100% 24%) 72%,
+  hsl(188deg 53% 34%) 100%
+);
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    caret-color: transparent;
+}
+
+.tab-container{
+    margin: 0 auto;
+    margin-top: 4rem;
+    width: 90%;
+     max-width: 550px;
+     display: flex;
+     justify-content: space-between;
+}
+.tab{
+    cursor: pointer;
+    font-size: 15px;
+    caret-color: transparent;
+    letter-spacing: 1.75px;
+    padding: 5px 8px;
+    font-family: ui-sans-serif;
+}
+.tab.current-tab{
+    /* background-color: rgba(219, 226, 239, 0.5); */
+    border-radius: 4px;
+    background-color: rgb(42 137 218 / 50%);
+    /* border-radius: 4px; */
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.form-container.active{
+    opacity: 1;
+    scale: 1;
+    display: flex;
+}
+
+.weather-container{
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;*/
+    margin-block: 4rem; 
+
+}
+.btn{
+    all: unset;
+    background-color: var(--colorDark2);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    caret-color: transparent;
+    
+}
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grant-location-container{
+    display: none;
+}
+.grant-location-container.active{
+    display: flex;
+}
+.grant-location-container img{
+margin-bottom: 2rem;
+
+
+}
+
+.grant-location-container p:first-of-type{
+    font-size: 1.75rem;
+    font-weight: 600;
+    caret-color: transparent;
+    
+}
+
+.grant-location-container p:last-of-type{
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 0.75rem;
+    margin-bottom: 1.75rem;
+    letter-spacing: 0.75px;
+    caret-color: transparent;
+
+}
+.loading-container{
+    display: none;
+}
+.loading-container.active{
+    display: flex;
+}
+.loading-container p{
+    text-transform: uppercase;
+    caret-color: transparent;
+
+}
+
+
+
+.user-info-container{
+    display: none;
+}
+.user-info-container.active{
+    display: flex;
+}
+.name{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin-bottom: 1rem;
+    caret-color: transparent;
+
+}
+.user-info-container p{
+    font-size: 1.5rem;
+    font-weight: 200;
+    text-transform: capitalize;
+    caret-color: transparent;
+
+}
+.user-info-container img{
+    width: 90px;
+    height: 90px;
+}
+
+.name p{
+    font-size: 2rem;
+    caret-color: transparent;
+
+}
+.name img{
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+/* p[data-temp] are custom attribute */
+.user-info-container p[data-temp]{
+    font-size: 2.75rem;
+    font-weight: 700;
+    caret-color: transparent;
+
+}
+.parameter-container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px 20px;
+    justify-content: center;
+    margin-top: 2rem;
+
+}
+.parameter{
+    width: 30%;
+    max-width: 200px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5px 0;
+     align-items: center;
+     caret-color: transparent;
+}
+.parameter img{
+    width: 50px;
+    height:50px;
+}
+.parameter p:first-of-type{
+    text-transform: uppercase;
+    font-size: 1.15rem;
+    font-weight: 600;
+    caret-color: transparent;
+}
+.parameter p:last-of-type{
+    font-size: 1rem;
+    font-weight: 200;
+    caret-color: transparent;
+}
+.form-container{
+    display: none;
+    /* display: flex; */
+    width: 90%;
+    max-width: 550px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    margin-bottom: 3rem;
+    caret-color: rgba(26, 24, 24, 0.904);
+}
+.form-container.active{
+    display: flex;
+}
+.form-container input{
+    all: unset;
+    width: calc(100% - 80px);
+  
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+    
+}
+.form-container input::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+}
+.form-container input:focus{
+    outline: 3px solid rgba(255, 255, 255, 0.7);
+
+}
+.form-container .btn{
+    padding: unset;
+    width: 40px;
+    height: 40px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: 1px;
+}
+
+.error-container{
+    display: none;
+}
+.error-container.active{
+    display: flex;
+}
+.error-container img{
+    caret-color: transparent;
+    mix-blend-mode: color-burn;
+    margin-bottom: -4px;
+   
+}
+.error-container p{
+    text-transform: capitalize;
+    caret-color: transparent;
+    font-size: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: emoji;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tab.current-tab{
+    /* background-color: rgba(219, 226, 239, 0.5); */
+    background-color: rgb(42 137 218 / 50%);
+    border-radius: 4px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+
+.form-container.active{
+    opacity: 1;
+    scale: 1;
+    display: flex;
+}
